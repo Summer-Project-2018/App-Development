@@ -1,6 +1,9 @@
+var request = require("request")
 
-dereksABitch = [
-	{"name": "value"},
-	{"name": "value"},
-	{"Derek": "Bitch"}
-]
+request('http://www.google.com', function(error, response, body){
+    if(error){
+        console.log("ERROR");
+    }else if(response.statusCode === 200){
+        console.log(body);
+    }
+});
